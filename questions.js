@@ -29,4 +29,27 @@ module.exports = [
       message: 'Please enter test instructions:',
       name: 'test',
     },
-  ]
+    {
+      type: 'input',
+      message: 'Please enter your github username:',
+      name: 'questions',
+      validate: function(response) {
+        if (response.length < 1) {
+        return console.log("A valid GitHub username is required.")
+        }
+        return true;
+        
+    }
+    },
+    {
+      type: 'input',
+      message: 'Please enter your email address:',
+      name: 'questions',
+      validate: function(response) {
+        if ( response.length<5){
+        return console.log('Please enter a valid email address.')
+        }
+        return true;
+    
+    }
+}];
