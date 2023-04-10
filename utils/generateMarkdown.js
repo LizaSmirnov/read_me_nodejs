@@ -1,16 +1,28 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
-function renderLicenseBadge(license) {}
 
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
-function renderLicenseLink(license) {
-
+function renderLicenseBadge(license) {
+  if (!license) {
+    return ``;
+  } else {
+    `[![${license} license](https://img.shields.io/badge/License-${license}-blue.svg)](${renderLicenseLink(license)})`
+  }
 }
 
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
+function renderLicenseLink(license) {
+  if (license === 'apache-2.0'){
+    return `https://www.apache.org/licenses/LICENSE-2.0`
+  }
+  if (license === 'mit'){
+    return `https://lbesson.mit-license.org/`
+  }
+  if (license === 'isc'){
+    return `https://opensource.org/license/isc-license-txt/`
+  }
+  }
+
 function renderLicenseSection(license) {
+  if (!license){
+    return '';
+  }
   return `## License
 ${renderLicenseLink(license)}
   `
@@ -44,7 +56,9 @@ ${data.conrtibution}
 ${data.test}
 
 ## Questions
-${data.questions}
+${data.questions} 
+GitHub: https://github.com/${data.questions.githubInput}  
+Email: ${data.questions[emailInput]}
 
 ${renderLicenseSection(data.license)}
 `;
