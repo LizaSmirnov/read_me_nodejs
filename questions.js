@@ -87,7 +87,7 @@ module.exports = [
     {
       type: 'input',
       message: 'Please enter your email address:',
-      name: 'questions',
+      name: 'email',
       validate: emailInput => {
         if ( emailInput.length>5){
         return true;
