@@ -33,5 +33,5 @@ https://lbesson.mit-license.org/
   ;
 [![mit license](https://img.shields.io/badge/License-mit-blue.svg)];
 
-##Demonstration
+## Demonstration
 Click here to watch a demo of the app in action [demo](https://www.loom.com/share/0d50ad36917b49a2a03f2b8eccbe4c35). Please mute there was a basketball game in bakround.
